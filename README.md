@@ -14,11 +14,30 @@ Compile and analyze temperature trends for the months of June & December to dete
 
 ### Results ###
 The differences in weather between June and December are as follows:
-- A
-- B
-- C
+1. A
+2. B
+3. C
 
 
 ### Summary ###
-Test
+Summary of Results
 
+Two queries
+```
+jun_rain_list = session.query(Measurement.date, Measurement.prcp).filter(extract('month', Measurement.date) == 6)
+jun_rain_df = pd.DataFrame(jun_rain_list, columns=['date', 'precipitation'])
+jun_rain_df.set_index(jun_rain_df['date'], inplace=True)
+jun_rain_df = jun_rain_df.sort_index()
+print(jun_rain_df.to_string(index=False))
+jun_rain_df.plot(rot=90)
+```
+
+
+```
+dec_rain_list = session.query(Measurement.date, Measurement.prcp).filter(extract('month', Measurement.date) == 12)
+dec_rain_df = pd.DataFrame(dec_rain_list, columns=['date', 'precipitation'])
+dec_rain_df.set_index(dec_rain_df['date'], inplace=True)
+dec_rain_df = dec_rain_df.sort_index()
+print(dec_rain_df.to_string(index=False))
+dec_rain_df.plot(rot=90)
+```
