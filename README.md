@@ -13,7 +13,13 @@ Compile and analyze temperature trends for the months of June & December to dete
 ## Analysis ##
 
 ### Results ###
-The differences in weather between June and December are as follows:
+The summary statistics for each month are shown below:
+
+![](/Resources/June.png)
+
+![](/Resources/December.png)
+
+A comparison of the statistical data for each month shows that:
 1. On the average day, it is 3.9 degrees warmer in June (mean temperature = 74.9) than December (mean temperature = 71.0).  
 2. The minimum temperature recorded in June (64) is 8 degrees higher than the minimum temperature recorded in December (56); however, the maximum temperature recorded in June (85) is only 2 degrees higher than the maximum temperature recorded in December (83). 
 3. The temperature data for both June and December are symmetric (i.e. not skewed left or right) given that the mean vs. median temperatures for each month are nearly the same. Therefore, we can use the mean +/- two (2) standard deviations to get a range of 95% of the data. For December, this range is 63.5 - 78.5 degrees.  For June, this range is 68.4 - 81.5 degrees. 
