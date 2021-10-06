@@ -26,9 +26,8 @@ A comparison of the statistical data for each month shows that:
 
 
 ### Summary ###
-The statsitical data suggests that while it does get colder on average in December, the majority of days will be just as warm as a typical day in June. While we have a good understanding of the temperatures in June & December, further analysis is needed on the weather data before a final answer can be given on year-round sustainability. The obvious next step is to compare preciptation trends, and the historical data can be pulled from each month via the following queries:
+The statsitical data suggests that while it does get colder on average in December, the majority of days will be just as warm as a typical day in June. While we have a good understanding of the temperatures in June & December, further analysis is needed on the weather data before a final answer can be given on year-round sustainability. The obvious next step is to compare preciptation trends, and the historical data can be extracted for each month (with a quick bar chart) via the following queries:
 
-Two queries
 ```
 jun_rain_list = session.query(Measurement.date, Measurement.prcp).filter(extract('month', Measurement.date) == 6)
 jun_rain_df = pd.DataFrame(jun_rain_list, columns=['date', 'precipitation'])
